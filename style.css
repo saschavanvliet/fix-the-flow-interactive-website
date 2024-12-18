@@ -1,0 +1,104 @@
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            border-bottom: 2px solid #f9a825;
+        }
+        .task-section {
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .task-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .task-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            opacity: 0;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+        .task-section:nth-child(even) p {
+            animation-delay: 0.5s;
+        }
+        .flowers {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            transform: scale(0.8);
+            transition: transform 0.5s ease;
+        }
+        .flowers img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .flowers:hover {
+            transform: scale(1);
+        }
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+        .falling-petal {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background-image: url('petal.png');
+            background-size: cover;
+            animation: fall 5s linear infinite;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
