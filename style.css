@@ -28,7 +28,7 @@
             transition: all 0.3s;
         }
         nav a:hover {
-            border-bottom: 2px solid #f9a825;
+            border-bottom: 2px solid rgb(135, 192, 245)
         }
         .task-section {
             padding: 40px;
